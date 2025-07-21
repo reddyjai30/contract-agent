@@ -1,8 +1,6 @@
-import express from 'express';
-import { config } from 'dotenv';
-import { ethers } from 'ethers';
-
-config();
+const express = require('express');
+require('dotenv').config();
+const { ethers } = require('ethers');
 
 const router = express.Router();
 
@@ -20,4 +18,4 @@ router.get('/balance', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
