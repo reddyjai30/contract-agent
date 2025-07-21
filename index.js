@@ -5,7 +5,7 @@ import { ethers } from 'ethers';
 import contractJson from '../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json' assert { type: "json" };
 import walletRoute from './routes/wallet.js';
 
-const app = express();
+
 app.use(cors());
 app.use(express.json());
 app.use('/wallet', walletRoute);
