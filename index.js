@@ -2,9 +2,9 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { ethers } from 'ethers';
-const contractJson = await import('../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json', {
-  assert: { type: 'json' }
-});
+const express = require('express');
+const cors = require('cors');
+const contractJson = require('../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json');
 //import contractJson from '../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json' assert { type: "json" };
 import walletRoute from './routes/wallet.js';
 
