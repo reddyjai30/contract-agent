@@ -2,7 +2,9 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { ethers } from 'ethers';
-import contractJson from '../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json' assert { type: "json" };
+import fs from 'fs';
+const contractJson = JSON.parse(fs.readFileSync(new URL('../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json', import.meta.url)));
+//import contractJson from '../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json' assert { type: "json" };
 import walletRoute from './routes/wallet.js';
 
 
