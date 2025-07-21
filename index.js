@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { ethers } = require('ethers');
-const contractJson = require('../contracts/artifacts/contracts/IntelliVaultStaker.sol/IntelliVaultStaker.json');
+const path = require('path');
+const contractJson = require(path.join(__dirname, 'contracts', 'artifacts', 'contracts', 'IntelliVaultStaker.sol', 'IntelliVaultStaker.json'));
 const walletRoute = require('./routes/wallet.js');
 
 const app = express(); 
